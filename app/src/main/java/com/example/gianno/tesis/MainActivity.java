@@ -21,7 +21,7 @@ public class MainActivity extends ActionBarActivity {
     private static final String TWITTER_KEY = "szmdlDUYKNLyMZQ4hfeBIsIJJ";
     private static final String TWITTER_SECRET = "MRgV3XalRIdJNfmjWjAt5i9ejWEGqv5BuTDvAaJyx5RPP1nSuu";
     private TwitterLoginButton loginButton;
-
+    //BRANCH SOLE
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
