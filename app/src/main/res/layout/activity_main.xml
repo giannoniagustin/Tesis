@@ -10,4 +10,22 @@
         android:layout_height="wrap_content"
         android:layout_centerInParent="true"/>
 
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="@android:color/holo_blue_light"
+        android:id="@+id/tv_bienvenidos"
+        android:layout_marginTop="94dp"
+        android:textAlignment="center"
+        android:textColor="#ff5c61ff"
+        android:textSize="@dimen/abc_action_bar_stacked_max_height"
+        android:textStyle="bold|italic"
+        android:theme="@style/Base.Theme.AppCompat"
+        android:singleLine="false"
+        android:layout_alignParentTop="true"
+        android:layout_alignRight="@+id/twitter_login_button"
+        android:layout_alignEnd="@+id/twitter_login_button"
+        style="@style/Base.ThemeOverlay.AppCompat.Light"
+        android:text="@string/tv_bienvenidos" />
+
 </RelativeLayout>
