@@ -1,5 +1,5 @@
 # Tesis
-Lineamiento de Desarrollo
+#Lineamiento de Desarrollo
 -Variables en notacion camello , comenzando con minuscula.
 -Constantes imprenta mayuscula.
 -Identificadores de recurso , comienzan con las iniciales del recurso(ej: Tex View tv_bienvenidos)
