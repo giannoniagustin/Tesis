@@ -13,7 +13,6 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textAppearance="@android:color/holo_blue_light"
         android:id="@+id/tv_bienvenidos"
         android:layout_marginTop="94dp"
         android:textAlignment="center"
