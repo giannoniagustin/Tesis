@@ -32,7 +32,10 @@ public class MainActivity extends ActionBarActivity {
         loginButton.setCallback(new Callback<TwitterSession>() {
             @Override
             public void success(Result<TwitterSession> result) {
-                // Do something with result, which provides a TwitterSession for making API calls
+              Intent iMaps;
+              iMaps = new Intent(MainActivity.this, MapsActivity.class);
+              startActivity(iMaps);
+
             }
 
             @Override

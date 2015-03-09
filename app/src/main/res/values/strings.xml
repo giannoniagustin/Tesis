@@ -6,5 +6,6 @@
     <string name="action_settings">Settings</string>
     <string name="button_inicSession">Iniciar Sesion</string>
     <string name="tv_bienvenidos">Bienvenidos</string>
+    <string name="title_activity_maps">Map</string>
 
 </resources>
