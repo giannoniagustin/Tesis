@@ -1,6 +1,6 @@
 package com.example.gianno.tesis;
 
-import android.content.Context;
+
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.Menu;
@@ -9,22 +9,13 @@ import com.twitter.sdk.android.Twitter;
 import com.twitter.sdk.android.core.TwitterAuthConfig;
 import io.fabric.sdk.android.Fabric;
 import android.content.Intent;
-import android.widget.Toast;
+
 
 import com.twitter.sdk.android.core.Callback;
 import com.twitter.sdk.android.core.Result;
 import com.twitter.sdk.android.core.TwitterException;
 import com.twitter.sdk.android.core.TwitterSession;
 import com.twitter.sdk.android.core.identity.TwitterLoginButton;
-
-import org.apache.http.HttpEntity;
-import org.apache.http.HttpResponse;
-import org.apache.http.client.HttpClient;
-import org.apache.http.client.methods.HttpGet;
-import org.apache.http.impl.client.DefaultHttpClient;
-import org.apache.http.protocol.BasicHttpContext;
-import org.apache.http.protocol.HttpContext;
-import org.apache.http.util.EntityUtils;
 
 
 public class MainActivity extends ActionBarActivity {
@@ -52,14 +43,6 @@ public class MainActivity extends ActionBarActivity {
                 // Do something on failure
             }
         });
-        Thread tr = new Thread(){
-            @Override
-            public void run(){
-                final String Resultado = leer_tabla();
-
-            }
-        };
-        tr.start();
 
     }
 
@@ -90,39 +73,5 @@ public class MainActivity extends ActionBarActivity {
         super.onActivityResult(requestCode, resultCode, data);
         loginButton.onActivityResult(requestCode, resultCode, data);
     }
-    public String leer(){
-        HttpClient cliente =new DefaultHttpClient();
-        HttpContext contexto = new BasicHttpContext();
-        HttpGet httpget = new HttpGet("http://192.168.0.12:80/tesis/prueba.php");
 
-
-        String resultado;
-        try {
-            HttpResponse response = cliente.execute(httpget,contexto);
-            HttpEntity entity = response.getEntity();
-            resultado = EntityUtils.toString(entity, "UTF-8");
-        } catch (Exception e) {
-            // TODO: handle exception
-           resultado= e.getMessage();
-        }
-        return resultado;
-
-    }
-    public String leer_tabla(){
-        HttpClient cliente =new DefaultHttpClient();
-        HttpContext contexto = new BasicHttpContext();
-        //HttpGet httpget = new HttpGet("http://192.168.0.12:80/tesis/GetData.php");
-        HttpGet httpget = new HttpGet("http://3doblev.web44.net/GetData.php");
-        String resultado=null;
-        try {
-            HttpResponse response = cliente.execute(httpget,contexto);
-            HttpEntity entity = response.getEntity();
-            resultado = EntityUtils.toString(entity, "UTF-8");
-        } catch (Exception e) {
-            // TODO: handle exception
-            resultado= e.getMessage();
-        }
-        return resultado;
-
-    }
 }
